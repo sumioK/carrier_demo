@@ -6,5 +6,12 @@
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
 
+  <% if @user.avatar? %>
+    <p>
+      <strong>Avatar:</strong>
+      <%= image_tag @user.avatar.url %>
+    </p>
+  <% end %>
+
   <%= button_to "Destroy this user", @user, method: :delete %>
 </div>
