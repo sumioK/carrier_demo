@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  */
-.new-img{
+.new{
     width: 400px;
     object-fit: cover;
+}
+img:nth-child(2){
+    display: none;
 }
