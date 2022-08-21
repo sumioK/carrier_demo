@@ -7,3 +7,35 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
+
+
+
+// if(document.URL.match(/new/)){
+//     document.addEventListener('DOMContentLoaded', () => {
+
+//         const createImageHTML = (blob) => {  
+//             const imageElement = document.getElementById('new-image'); 
+//             const blobImage = document.createElement('img'); 
+//             blobImage.setAttribute('class', 'new-img') 
+//             blobImage.setAttribute('src', blob); 
+            
+//             imageElement.appendChild(blobImage); //追記
+//         }; 
+        
+//         document.getElementById('user_img').addEventListener('change', (e) =>{
+
+//             const file = e.target.files[0];  
+//             const blob = window.URL.createObjectURL(file); 
+//             createImageHTML(blob); 
+
+//         });
+//     }); 
+// }
+
+if (document.URL.match(/new/)){
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('user_img').addEventListener('change', (e) =>{
+        console.log(e);
+        });
+    });
+}

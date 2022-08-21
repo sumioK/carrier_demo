@@ -1,4 +1,4 @@
-<%= form_with(model: user) do |form| %>
+<%= form_with(model: user) do |f| %>
   <% if user.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -12,20 +12,22 @@
   <% end %>
 
   <div>
-    <%= form.label :nickname, style: "display: block" %>
-    <%= form.text_field :nickname %>
+    <%= f.label :nickname, style: "display: block" %>
+    <%= f.text_field :nickname %>
   </div>
 
   <div>
-    <%= form.label :age, style: "display: block" %>
-    <%= form.number_field :age %>
+    <%= f.label :age, style: "display: block" %>
+    <%= f.number_field :age %>
   </div>
 
   <div>
-    <%= form.label :avatar, style: "display: block " %>
-    <%= form.file_field :avatar %>
+    <%= f.label :avatar, style: "display: block " %>
+    <%= f.file_field :avatar, id: :user_img %>
+
+    <div id="new-image"></div>
   </div>
   <div>
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>
