@@ -73,3 +73,5 @@ end
 
 gem 'carrierwave'
 gem 'jquery-rails'
+
+gem 'rmagick'
